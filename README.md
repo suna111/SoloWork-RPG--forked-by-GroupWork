@@ -13,10 +13,14 @@
     ４、各キャラクターの名前を入力したのち、submitボタンを押すとPOSTメソッドでNameServletへ
     ５、入力値input name="name"を取得し、各インスタンスに保存。セッションスコープに渡してregist.jspで表示
     ６、BACKボタンを押すとNameServletのdoGet()へ渡り、name.jspが表示される
-      　OKボタンを押すとNameCheckServletのdoGet()内　フォワードでnameCheck.jspを表示
+      　OKボタンを押すとNameCheckServletのdoGet()内　フォワードでprologue.jspを表示
       
 ### ゲーム開始からモンスター登場まで
-     のちほど更新予定
+     １、NEXTボタンを押すとPrologueServletのdoGet()内　フォワードでstory.jspを表示
+     ２、PrologueServlet内でモンスターたちのインスタンスを保存。セッションスコープに渡す
+     ３、BATTLEボタンを押すとBattleServletのdoGet()内　フォワードでbattle.jspを表示
+     ４、クリックされたリンクに応じてactionの値を返す
+     
 ### モンスターとの戦闘中（３体倒すまで）
      のちほど更新予定
 ### ゲームクリア、再スタートの処理
