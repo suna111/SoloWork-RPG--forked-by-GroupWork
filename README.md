@@ -38,6 +38,47 @@
         ┗□WEB-INF
           ┗□jsp
         ┗indes.jsp //トップページ
+
+## ◎各ファイル詳細
+### src / beans
+        〇Charactersクラス（抽象）
+        ＜フィールド＞String name, int hp, int mp
+        ＜メソッド＞各getter, setter
+
+        〇Heroクラス（JavaBeans）
+        ＜フィールド＞String name, int hp, int MAX_HP, int mp, int MAX_MP
+        ＜コンストラクタ＞引数なし、引数あり(String name）
+        ＜メソッド＞attack, aid, thunder
+
+        〇Fighterクラス（JavaBeans）
+        ＜フィールド＞String name, int hp, int MAX_HP, int mp, int MAX_MP, int mdt
+        ＜コンストラクタ＞引数なし、引数あり（String name）
+        ＜メソッド＞mdtのgetter, setter,attack, meditation
+
+        〇Wizardクラス（JavaBeans）
+        ＜フィールド＞String name, int hp, int MAX_HP, int mp, int MAX_MP
+        ＜コンストラクタ＞引数なし、引数あり（String name）
+        ＜メソッド＞attack, fire, bomb
+
+        〇Monstersクラス（抽象）
+        ＜フィールド＞char suffix, int hp
+        ＜メソッド＞各getter, setter, attack
+
+        〇Slimeクラス（JavaBeans）
+        ＜フィールド＞int hp, int MAX_HP
+        ＜コンストラクタ＞引数なし、引数あり（char suffix）
+        ＜メソッド＞getName, attack, crouch
+
+        〇Matangoクラス（JavaBeans）
+        ＜フィールド＞int hp, int MAX_HP
+        ＜コンストラクタ＞引数なし、引数あり（char suffix）
+        ＜メソッド＞getName, attack, poison, rampage
+
+        〇Dragonクラス（JavaBeans）
+        ＜フィールド＞int hp, int MAX_HP
+        ＜コンストラクタ＞引数なし、引数あり（char suffix）
+        ＜メソッド＞getName, attack, bite
+
         
 ## ◎更新記録
     2021.07.07--リポジトリを作成。
