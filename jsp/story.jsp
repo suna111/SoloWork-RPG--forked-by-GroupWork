@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>かんたんなRPG</title>
+<jsp:include page="/WEB-INF/jsp/css.jsp" />
 </head>
 <body>
+<!-- HEADERは別ファイルから読み込む -->
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+
+<div id="main">
 <p>おはなし</p>
 
 <img src="/RPG/img/sample.png">
@@ -16,6 +22,9 @@ ${battleMsg}
 </p>
 
 <a href="/RPG/BattleServlet"><button>BATTLE</button></a>
+</div>
 
+<!-- FOOTERは別ファイルから読み込む -->
+<jsp:include page="/WEB-INF/jsp/footer.jsp" />
 </body>
 </html>
