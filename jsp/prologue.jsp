@@ -5,21 +5,39 @@
 <head>
 <meta charset="UTF-8">
 <title>かんたんなRPG</title>
-<jsp:include page="/WEB-INF/jsp/css.jsp" />
+
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/story.css" type="text/css">
 </head>
 <body>
 <!-- HEADERは別ファイルから読み込む -->
-<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+<jsp:include page="/WEB-INF/jsp/header.jsp" />
+
 
 <div id="main">
-<p>おはなし</p>
+<p class="story">
+　ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
 
+</p>
+
+<div id="wrapper">
 <img src="/RPG/img/sample.png">
 
-<p>説明</p>
-
-<a href="/RPG/PrologueServlet"><button>NEXT</button></a>
+<p>
+操作方法はクリックだけ！<br>
+「たたかう」などのコマンドをクリックするとモンスターを攻撃します<br>
+すべてのモンスターのHPが０になったら勝利<br>
+逆に勇者たちのHPが０になると・・・<br>
+</p>
+</div>
+<a href="/RPG/PrologueServlet"><button class="buttonPosi">NEXT</button></a>
 </div>
 
 <!-- FOOTERは別ファイルから読み込む -->

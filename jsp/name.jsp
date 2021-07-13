@@ -7,6 +7,7 @@
 <title>かんたんなRPG</title>
 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/name.css" type="text/css">
 
 </head>
 <body>
@@ -14,9 +15,10 @@
 <jsp:include page="/WEB-INF/jsp/header.jsp" />
 
 <div id="main">
-<div id="wrapper">
-<form action="/RPG/NameServlet" method="post">
 
+<p class="message">あなたたちの名前は？</p>
+<form action="/RPG/NameServlet" method="post">
+<div id="wrapper">
 	<div class="item">
 		<p>勇者</p>
 		<input type="text" name="heroName">
@@ -34,12 +36,13 @@
 		<input type="text" name="wizardName">
 		<img src="/RPG/img/sample.png">
 	</div>
+</div>
 
+	<button type="submit" value="OK" class="buttonPosi">OK</button>
 
-	<button><input type="submit" value="決定"></button>
 </form>
 </div>
-</div>
+
 <!-- FOOTERは別ファイルから読み込む -->
 <jsp:include page="/WEB-INF/jsp/footer.jsp" />
 </body>

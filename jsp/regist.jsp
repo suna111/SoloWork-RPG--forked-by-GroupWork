@@ -15,6 +15,7 @@
 <title>かんたんなRPG</title>
 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/name.css" type="text/css">
 
 </head>
 <body>
@@ -22,6 +23,8 @@
 <jsp:include page="/WEB-INF/jsp/header.jsp" />
 
 <div id="main">
+<p class="message">これでいいですか？</p>
+
 <div id="wrapper">
 
 <div class="item">
@@ -42,8 +45,11 @@
 <p><c:out value="${wizard.hp} / ${wizard.mp}" /></p>
 </div>
 </div>
-<a href="/RPG/NameServlet"><button>BACK</button></a> <!-- 名前入力画面へと遷移 -->
+
+<div id="flexWrapper">
+<a href="/RPG/NameServlet"><button class="buttonPosi">BACK</button></a> <!-- 名前入力画面へと遷移 -->
 <a href="/RPG/NameCheckServlet"><button>OK</button></a>
+</div>
 
 </div>
 <!-- FOOTERは別ファイルから読み込む -->

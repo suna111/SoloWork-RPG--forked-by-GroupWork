@@ -5,23 +5,35 @@
 <head>
 <meta charset="UTF-8">
 <title>かんたんなRPG</title>
-<jsp:include page="/WEB-INF/jsp/css.jsp" />
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/story.css" type="text/css">
 </head>
 <body>
 <!-- HEADERは別ファイルから読み込む -->
-<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css" type="text/css">
+<jsp:include page="/WEB-INF/jsp/header.jsp" />
+
 
 <div id="main">
-<p>おはなし</p>
-
+<p class="story">
+　ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+</p>
+<div id="wrapper">
 <img src="/RPG/img/sample.png">
 
 <p>
-${battleMsg}
+モンスターが現れた！${battleMsg}
 </p>
+</div>
 
-<a href="/RPG/BattleServlet"><button>BATTLE</button></a>
+<a href="/RPG/BattleServlet"><button class="buttonPosi">BATTLE</button></a>
+
 </div>
 
 <!-- FOOTERは別ファイルから読み込む -->
