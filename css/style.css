@@ -8,11 +8,14 @@
 	border-radius: 20px;
 
 }
-h2 {
+header h2 {
 	text-align: center;
 	color: skyblue;
 	margin: 20px;
 }
+
+
+
 #wrapper {
 	display: flex;
 	justify-content: space-around;
@@ -32,8 +35,7 @@ button {
 
 .buttonPosi {
 	margin-left: 300px;
-	margin-bottom: 100px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 input {
@@ -44,4 +46,8 @@ input {
 	text-align: center;
 	margin-top: 40px;
 
+}
+
+footer p {
+	text-align: center;
 }

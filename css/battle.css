@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #wrapper {
-	padding-top: 0px;
+	padding-top: 0;
 	padding-bottom: 0;
 }
 
@@ -9,12 +9,13 @@
 	text-align: center;
 }
 .item {
-	margin-top: 30px;
-	margin-bottom: 40px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .command {
+	margin-top: 20px;
 	text-align: center;
-	margin: 15px;
+
 }
 
 #flexWrapper {
@@ -23,10 +24,35 @@
 }
 
 .message {
-	margin-top: 15px;
+	margin-bottom: 40px;
 	color: white;
 	background-color: #333;
+	width: 500px;
 }
 .chara {
+	margin-top: 25px;
 	text-align: center;
+}
+
+
+input[type=radio] {
+	display: none;
+}
+label {
+	display: block;
+	padding: 10px;
+	border-radius: 30px;
+	border: 1px solid black;
+	width: 200px;
+	background-color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+input:checked + label{
+	background-color: skyblue;
+}
+
+label:hover {
+	background-color: skyblue;
 }
