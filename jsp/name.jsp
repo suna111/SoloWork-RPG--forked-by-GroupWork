@@ -21,19 +21,19 @@
 <div id="wrapper">
 	<div class="item">
 		<p>勇者</p>
-		<input type="text" name="heroName">
+		<input type="text" name="heroName" required>
 		<img src="/RPG/img/sample.png">
 	</div>
 
 	<div class="item">
 		<p>格闘家</p>
-		<input type="text" name="fighterName">
+		<input type="text" name="fighterName" required>
 		<img src="/RPG/img/sample.png">
 	</div>
 
 	<div class="item">
 		<p>魔法使い</p>
-		<input type="text" name="wizardName">
+		<input type="text" name="wizardName" required>
 		<img src="/RPG/img/sample.png">
 	</div>
 </div>

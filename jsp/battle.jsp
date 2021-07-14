@@ -40,12 +40,20 @@ Slime slimeA = new Slime('A');
 
 <div id="flexWrapper">
 <div class="command">
-<p>コマンド</p>
+
+<form action="BattleGoServlet" method="post">
+
+<input type="radio" name="action" value="1" id="action1"><label for="action1">たたかう</label>
 
 
-<a href="/RPG/BattleGoServlet?action=1"><button>たたかう</button></a><br>
-<a href="/RPG/BattleGoServlet?action=2"><button>回復</button></a><br>
-<a href="/RPG/BattleGoServlet?action=3"><button>サンダー</button></a><br>
+<input type="radio" name="action" value="2" id="action2"><label for="action2">回復</label>
+
+
+<input type="radio" name="action" value="3" id="action3"><label for="action3">サンダー</label>
+
+
+	<input type="submit" value="OK">
+</form>
 </div>
 
 <p class="message">戦闘時のコメントが表示される場所</p>

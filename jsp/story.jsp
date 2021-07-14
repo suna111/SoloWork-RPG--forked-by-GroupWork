@@ -28,11 +28,11 @@
 <img src="/RPG/img/sample.png">
 
 <p>
-モンスターが現れた！${battleMsg}
+モンスターが現れた！
 </p>
 </div>
 
-<a href="/RPG/BattleServlet"><button class="buttonPosi">BATTLE</button></a>
+<a href="/RPG/BattleGoServlet"><button class="buttonPosi">BATTLE</button></a>
 
 </div>
 
