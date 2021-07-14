@@ -8,6 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import beans.Dragon;
+import beans.Matango;
+import beans.Slime;
 
 
 
@@ -18,7 +23,26 @@ public class PrologueServlet extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//モンスターたちを生み出す
+		Slime slimeA = new Slime('A');
+		Slime slimeB = new Slime('B');
+		Slime slimeC = new Slime('C');
 
+		Matango matangoA = new Matango('A');
+		Matango matangoB = new Matango('B');
+
+		Dragon dragon = new Dragon('A');
+
+		//セッションスコープに保存
+		HttpSession session = request.getSession();
+		session.setAttribute("slimeA", slimeA);
+		session.setAttribute("slimeB", slimeB);
+		session.setAttribute("slimeC", slimeC);
+
+		session.setAttribute("matangoA", matangoA);
+		session.setAttribute("matangoB", matangoB);
+
+		session.setAttribute("dragon", dragon);
 
 		//モンスター出現メッセージの分岐
 //		String battleMsg = "モンスター出現メッセージが表示される場所";

@@ -10,10 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import beans.Dragon;
 import beans.Fighter;
 import beans.Hero;
-import beans.Matango;
 import beans.Slime;
 import beans.Wizard;
 
@@ -40,25 +38,11 @@ public class BattleGoServlet extends HttpServlet {
 		Fighter fighter = (Fighter) session.getAttribute("fighter");
 		Wizard wizard = (Wizard) session.getAttribute("wizard");
 
-		//モンスターたちを生み出す
-		Slime slimeA = new Slime('A');
-		Slime slimeB = new Slime('B');
-		Slime slimeC = new Slime('C');
+		Slime slimeA = (Slime) session.getAttribute("slimeA");
+		Slime slimeB = (Slime) session.getAttribute("slimeB");
+		Slime slimeC = (Slime) session.getAttribute("slimeC");
 
-		Matango matangoA = new Matango('A');
-		Matango matangoB = new Matango('B');
 
-		Dragon dragon = new Dragon('A');
-
-		//セッションスコープに保存
-		session.setAttribute("slimeA", slimeA);
-		session.setAttribute("slimeB", slimeB);
-		session.setAttribute("slimeC", slimeC);
-
-		session.setAttribute("matangoA", matangoA);
-		session.setAttribute("matangoB", matangoB);
-
-		session.setAttribute("dragon", dragon);
 
 		switch(action) {
 		case 1:
