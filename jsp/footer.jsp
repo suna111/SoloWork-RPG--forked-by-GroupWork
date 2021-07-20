@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <footer>
-<p>very simple rpg FOOTER TEST</p>
+<p>very simple rpg</p>
 </footer>
