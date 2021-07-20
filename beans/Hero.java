@@ -38,7 +38,7 @@ public class Hero extends Characters implements Serializable{
 		}
 	}
 
-	// 回復
+	// 吸血
 	public void aid(Characters c, Monsters m) {
 		if (this.getMp() >= 5) {
 			int recovery = 20;
