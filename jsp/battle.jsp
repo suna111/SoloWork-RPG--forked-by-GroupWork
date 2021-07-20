@@ -21,17 +21,17 @@
 <form action="BattleGoServlet" method="post">
 <div id="wrapper">
 
-<div class="item" id="hidden1">
+<div class="item">
 <img src="/RPG/img/sample.png">
-<input type="radio" name="target" value="1" id="target1"><label for="target1">${slimeA.name} / ${slimeA.hp}</label>
+<input type="radio" name="target" value="1" id="target1" required><label for="target1">${slimeA.name} / ${slimeA.hp}</label>
 </div>
 
-<div class="item" id="hidden2">
+<div class="item">
 <img src="/RPG/img/sample.png">
 <input type="radio" name="target" value="2" id="target2"><label for="target2">${slimeB.name} / ${slimeB.hp}</label>
 </div>
 
-<div class="item" id="hidden3">
+<div class="item">
 <img src="/RPG/img/sample.png">
 <input type="radio" name="target" value="3" id="target3"><label for="target3">${slimeC.name} / ${slimeC.hp}</label>
 </div>
@@ -43,7 +43,7 @@
 
 
 
-<input type="radio" name="action" value="1" id="action1"><label for="action1">たたかう</label>
+<input type="radio" name="action" value="1" id="action1" required><label for="action1">たたかう</label>
 
 
 <input type="radio" name="action" value="2" id="action2"><label for="action2">吸血</label>

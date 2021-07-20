@@ -23,7 +23,7 @@
 
 <div class="item">
 <img src="/RPG/img/sample.png">
-<input type="radio" name="target" value="1" id="target1"><label for="target1">${matangoA.name} / ${matangoA.hp}</label>
+<input type="radio" name="target" value="1" id="target1" required><label for="target1">${matangoA.name} / ${matangoA.hp}</label>
 </div>
 
 <div class="item">
@@ -38,7 +38,7 @@
 
 
 
-<input type="radio" name="action" value="1" id="action1"><label for="action1">たたかう</label>
+<input type="radio" name="action" value="1" id="action1" required><label for="action1">たたかう</label>
 
 
 <input type="radio" name="action" value="2" id="action2"><label for="action2">精神統一</label>

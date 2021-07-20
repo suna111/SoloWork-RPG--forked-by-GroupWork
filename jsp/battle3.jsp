@@ -23,7 +23,7 @@
 
 <div class="item">
 <img src="/RPG/img/sample.png">
-<input type="radio" name="target" value="1" id="target1"><label for="target1">${dragon.name} / ${dragon.hp}</label>
+<input type="radio" name="target" value="1" id="target1" checked><label for="target1">${dragon.name} / ${dragon.hp}</label>
 </div>
 
 </div>
@@ -33,7 +33,7 @@
 
 
 
-<input type="radio" name="action" value="1" id="action1"><label for="action1">たたかう</label>
+<input type="radio" name="action" value="1" id="action1" required><label for="action1">たたかう</label>
 
 
 <input type="radio" name="action" value="2" id="action2"><label for="action2">ファイヤー</label>
