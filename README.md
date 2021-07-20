@@ -26,9 +26,12 @@
      ３、BattleGoServletのdoPost()内にあるswitch文により、攻撃処理を実施
      ４、すべてのモンスターのHPが0になるまで続ける
      
-     以上をスライム、マタンゴ、ドラゴンの３戦闘分実施する
+     以上をスライム(battle.jsp / BattleGoServlet)、マタンゴ(battle2.jsp / Battle2GoServlet)、ドラゴン(battle3.jsp / Battle3GoServlet)の３戦闘分実施する
 ### ゲームクリア、再スタートの処理
-     のちほど更新予定
+     １、ドラゴンのHPが0になる
+     ２、Battle3GoServletのdoPost()内　フォワードでbattleEnd.jspを表示
+     ３、TOPボタンを押すとWelcomeServletのdoGet()内　フォワードでindex.jspを表示
+     ４、TOPページに戻り、再スタートできる
      
 ## ◎システム設計図
     のちほど更新予定
@@ -56,6 +59,8 @@
         　┗NameCheckServlet.java
         　┗PlorogueServlet.java
         　┗BattleGoServlet.java
+        　┗Battle2GoServlet.java
+        　┗Battle3GoServlet.java
 
       ┗WebContent
         ┗□css
@@ -71,6 +76,8 @@
           　┗prologue.jsp
           　┗story.jsp
           　┗battle.jsp
+          　┗battle2.jsp
+          　┗battle3.jsp
           　┗header.jsp
           　┗footer.jsp
         ┗indes.jsp //トップページ
@@ -121,4 +128,4 @@
     2021.07.08--cssで軽くレイアウトを整える。
     2021.07.13--cssの再調整。しかしeclipseの内部ブラウザとchromeで、cssの適用にズレが生じている。
     2021.07.14--chromeを基準にcssを調整。他のブラウザでも大きく崩れることはないため、一旦レイアウトは完成とする。servletの処理も一部変更。
-    2021.07.20--battle.jspおよびBattleGoServletの改修。ラジオボタンを組み合わせて攻撃対象・方法が分岐するように記述。
+    2021.07.20--battle.jspおよびBattleGoServletの改修。ラジオボタンを組み合わせて攻撃対象・方法が分岐するように記述。ゲームクリア、TOPへ戻るまで画面遷移も完成。
