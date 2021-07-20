@@ -12,18 +12,18 @@ import javax.servlet.http.HttpSession;
 
 import beans.Fighter;
 import beans.Hero;
-import beans.Slime;
+import beans.Matango;
 import beans.Wizard;
 
 
-@WebServlet("/BattleGoServlet")
-public class BattleGoServlet extends HttpServlet {
+@WebServlet("/Battle2GoServlet")
+public class Battle2GoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/battle.jsp");
-		dispatcher.forward(request, response);
+//		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/battle.jsp");
+//		dispatcher.forward(request, response);
 
 	}
 
@@ -39,78 +39,65 @@ public class BattleGoServlet extends HttpServlet {
 		Fighter fighter = (Fighter) session.getAttribute("fighter");
 		Wizard wizard = (Wizard) session.getAttribute("wizard");
 
-		Slime slimeA = (Slime) session.getAttribute("slimeA");
-		Slime slimeB = (Slime) session.getAttribute("slimeB");
-		Slime slimeC = (Slime) session.getAttribute("slimeC");
+		Matango matangoA = (Matango) session.getAttribute("matangoA");
+		Matango matangoB = (Matango) session.getAttribute("matangoB");
+
 
 		//選択内容に合わせて行動を分岐させる
 		switch(action) {
 		case 1:
 			switch(target) {
 				case 1:
-					hero.attack(slimeA);
+					fighter.attack(matangoA);
 					break;
 				case 2:
-					hero.attack(slimeB);
-					break;
-				case 3:
-					hero.attack(slimeC);
+					fighter.attack(matangoB);
 					break;
 			}
-			slimeA.attack(hero);
+			matangoA.attack(fighter);
 			break;
 		case 2:
 			switch(target) {
-			case 1:
-				hero.aid(hero, slimeA);
-				break;
-			case 2:
-				hero.aid(hero, slimeB);
-				break;
-			case 3:
-				hero.aid(hero, slimeC);
-				break;
-		}
-			slimeB.attack(hero);
+				case 1:
+					fighter.meditation(matangoA);
+					break;
+				case 2:
+					fighter.meditation(matangoB);
+					break;
+			}
+			matangoB.poison(fighter);
 			break;
 		case 3:
 			switch(target) {
 				case 1:
-					hero.thunder(slimeA);
+					fighter.power(matangoA);
 					break;
 				case 2:
-					hero.thunder(slimeB);
-					break;
-				case 3:
-					hero.thunder(slimeC);
+					fighter.power(matangoB);
 					break;
 			}
-			slimeC.attack(hero);
+			matangoA.rampage(hero, fighter, wizard);
 			break;
 		}
 
 		//HPが0以下にならないようにする
-		if(slimeA.getHp() < 0 ) {
-			slimeA.setHp(0);
+		if(matangoA.getHp() < 0 ) {
+			matangoA.setHp(0);
 		}
 
-		if(slimeB.getHp() < 0 ) {
-			slimeB.setHp(0);
-		}
-
-		if(slimeC.getHp() < 0 ) {
-			slimeC.setHp(0);
+		if(matangoB.getHp() < 0 ) {
+			matangoB.setHp(0);
 		}
 
 
 		//すべてのモンスターのHPが0になったらフォワード
-		if((slimeA.getHp() == 0) && (slimeB.getHp() == 0) && (slimeC.getHp() == 0)) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/battle2.jsp");
+		if((matangoA.getHp() == 0) && (matangoB.getHp() == 0)) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/battle3.jsp");
 			dispatcher.forward(request, response);
 		}
 
 		//フォワードして表示
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/battle.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/battle2.jsp");
 		dispatcher.forward(request, response);
 	}
 
