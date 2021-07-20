@@ -7,19 +7,19 @@ public class Wizard extends Characters implements Serializable{
 		private String name;
 		private final int MAX_HP = 200;//最大HP、定数
 		private int hp;//HP、初期値を設定
-		private final int MAX_MP = 150;//最大MP、定数
+		private final int MAX_MP = 500;//最大MP、定数
 		private int mp;//MP、初期値を設定
 
 	//コンストラクタ
 		public Wizard(String name) {//名前を引数に取る
 			this.setName(name);
 			this.setHp(200);
-			this.setMp(150);
+			this.setMp(500);
 		}
 		public Wizard() {//引数なしでも誕生出来る
 			this.setName("マジカル");
 			this.setHp(200);
-			this.setMp(150);
+			this.setMp(500);
 		}
 
 	//操作・メソッド

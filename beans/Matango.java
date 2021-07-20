@@ -62,7 +62,7 @@ public class Matango extends Monsters implements Serializable{
 		// 攻撃3　毒攻撃（相手に10のダメージ、もしくはMP-3のダメージ。攻撃内容はランダムに決定。マタンゴ自身もHPを2使用する。)　
 
 		public void poison(Characters c){
-			int minus = -2;
+			int minus = 2;
 			this.setHp(this.getHp() - minus);//マタンゴ自身のHP－２
 
 			int r = new java.util.Random().nextInt(5);

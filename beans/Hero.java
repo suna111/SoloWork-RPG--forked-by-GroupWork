@@ -39,11 +39,14 @@ public class Hero extends Characters implements Serializable{
 	}
 
 	// 回復
-	public void aid(Characters c) {
+	public void aid(Characters c, Monsters m) {
 		if (this.getMp() >= 5) {
 			int recovery = 20;
 			c.setHp(c.getHp() + recovery);
 			this.setMp(this.getMp() - 5);
+
+			int dmg = 20;
+			m.setHp(m.getHp() - dmg);
 
 			String [] comment = {
 					this.getName() + "は回復呪文を唱えた！",

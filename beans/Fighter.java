@@ -131,12 +131,18 @@ public class Fighter extends Characters implements Serializable{
 		}
 	}
 
-	public void meditation() {
-		mdt++;
+	public void meditation(Monsters m) {
+		this.setMdt(this.getMdt() + 1);
+
+		int dmg = 5;
+		m.setHp(m.getHp() - dmg);
 		System.out.println(this.getName() + "は精神を集中させ、次の攻撃に備えた！");
 	}
 
-
+	public void power(Monsters m) {
+		int dmg = 100;
+		m.setHp(m.getHp() - dmg);
+	}
 
 
 }
