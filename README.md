@@ -68,6 +68,10 @@
         　┗name.css
         　┗story.css
         　┗battle.css
+        ┗□js
+        　┗battle.js
+        　┗battle2.js
+        　┗battle3.js
         ┗□img
         ┗□WEB-INF
           ┗□jsp
@@ -128,4 +132,4 @@
     2021.07.08--cssで軽くレイアウトを整える。
     2021.07.13--cssの再調整。しかしeclipseの内部ブラウザとchromeで、cssの適用にズレが生じている。
     2021.07.14--chromeを基準にcssを調整。他のブラウザでも大きく崩れることはないため、一旦レイアウトは完成とする。servletの処理も一部変更。
-    2021.07.20--battle.jspおよびBattleGoServletの改修。ラジオボタンを組み合わせて攻撃対象・方法が分岐するように記述。ゲームクリア、TOPへ戻るまで画面遷移も完成。
+    2021.07.20--battle.jspおよびBattleGoServletの改修。ラジオボタンを組み合わせて攻撃対象・方法が分岐するように記述。ゲームクリア、TOPへ戻るまで画面遷移も完成。JSファイルを追加。
