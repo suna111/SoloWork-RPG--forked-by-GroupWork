@@ -18,11 +18,15 @@
 ### ゲーム開始からモンスター登場まで
      １、NEXTボタンを押すとPrologueServletのdoGet()内　フォワードでstory.jspを表示
      ２、PrologueServlet内でモンスターたちのインスタンスを保存。セッションスコープに渡す
-     ３、BATTLEボタンを押すとBattleServletのdoGet()内　フォワードでbattle.jspを表示
-     ４、クリックされたリンクに応じてactionの値を返す
+     ３、BATTLEボタンを押すとBattleGoServletのdoGet()内　フォワードでbattle.jspを表示
      
 ### モンスターとの戦闘中（３体倒すまで）
-     のちほど更新予定
+     １、攻撃対象・攻撃方法（ラジオボタン）を選択し、OKボタンを押す
+     ２、攻撃対象（name="target"）攻撃方法（name="action"）のvalueがBattleGoServletのdoPost()内へ送られる
+     ３、BattleGoServletのdoPost()内にあるswitch文により、攻撃処理を実施
+     ４、すべてのモンスターのHPが0になるまで続ける
+     
+     以上をスライム、マタンゴ、ドラゴンの３戦闘分実施する
 ### ゲームクリア、再スタートの処理
      のちほど更新予定
      
@@ -33,14 +37,42 @@
 
     RPG //プロジェクト名
      ┗src
-        ┗□filter
         ┗□beans
+        　┗Characters.java
+        　┗Hero.java
+        　┗Fighter.java
+        　┗Wizard.java
+          ┗Monsters.java
+        　┗Slime.java
+        　┗Matango.java
+        　┗Dragon.java
+        ┗□filter
+        　┗EncodingFilter.java
+        ┗□model
+        　┗検討中
         ┗□servlet
+        　┗WelcomeServlet.java
+        　┗NameServlet.java
+        　┗NameCheckServlet.java
+        　┗PlorogueServlet.java
+        　┗BattleGoServlet.java
 
       ┗WebContent
         ┗□css
+        　┗style.css
+        　┗name.css
+        　┗story.css
+        　┗battle.css
+        ┗□img
         ┗□WEB-INF
           ┗□jsp
+          　┗name.jsp
+          　┗regist.jsp
+          　┗prologue.jsp
+          　┗story.jsp
+          　┗battle.jsp
+          　┗header.jsp
+          　┗footer.jsp
         ┗indes.jsp //トップページ
 
 ## ◎各ファイル詳細
@@ -89,3 +121,4 @@
     2021.07.08--cssで軽くレイアウトを整える。
     2021.07.13--cssの再調整。しかしeclipseの内部ブラウザとchromeで、cssの適用にズレが生じている。
     2021.07.14--chromeを基準にcssを調整。他のブラウザでも大きく崩れることはないため、一旦レイアウトは完成とする。servletの処理も一部変更。
+    2021.07.20--battle.jspおよびBattleGoServletの改修。ラジオボタンを組み合わせて攻撃対象・方法が分岐するように記述。
