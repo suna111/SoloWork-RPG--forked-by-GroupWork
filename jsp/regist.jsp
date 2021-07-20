@@ -2,12 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="beans.Hero, beans.Fighter, beans.Wizard" %>
-<%
-//Hero hero = (Hero) session.getAttribute("hero");
-//Fighter fighter = (Fighter) session.getAttribute("fighter");
-//Wizard wizard = (Wizard) session.getAttribute("wizard");
 
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,21 +23,21 @@
 <div id="wrapper">
 
 <div class="item">
-<p><c:out value="${hero.name}" /></p>
+<p>${hero.name}</p>
 <img src="/RPG/img/sample.png">
-<p><c:out value="${hero.hp} / ${hero.mp}" /></p>
+<p>HP:${hero.hp} / MP:${hero.mp}</p>
 </div>
 
 <div class="item">
-<p><c:out value="${fighter.name}" /></p>
+<p>${fighter.name}</p>
 <img src="/RPG/img/sample.png">
-<p><c:out value="${fighter.hp} / ${fighter.mp}" /></p>
+<p>HP:${fighter.hp} / MP：${fighter.mp}</p>
 </div>
 
 <div class="item">
-<p><c:out value="${wizard.name}" /></p>
+<p>${wizard.name}</p>
 <img src="/RPG/img/sample.png">
-<p><c:out value="${wizard.hp} / ${wizard.mp}" /></p>
+<p>HP：${wizard.hp} / MP：${wizard.mp}</p>
 </div>
 </div>
 

@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="beans.Hero, beans.Slime" %>
-<%
-Hero hero = new Hero();
-Slime slimeA = new Slime('A');
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +46,7 @@ Slime slimeA = new Slime('A');
 </form>
 </div>
 
-<p class="message" id="test">戦闘時のコメントが表示される場所</p>
+<p class="message" id="messageArea">攻撃対象と攻撃方法を選んでください</p>
 
 </div>
 
@@ -59,6 +56,6 @@ Slime slimeA = new Slime('A');
 <!-- FOOTERは別ファイルから読み込む -->
 <jsp:include page="/WEB-INF/jsp/footer.jsp" />
 
-<script src="/RPG/javascript/battle.js"></script>
+<script src="<%= request.getContextPath() %>/js/battle3.js"></script>
 </body>
 </html>
